@@ -1,0 +1,533 @@
+[Closed Files]
+File_0=SourceModule,'d:\program files\borland\delphi7\source\vcl\StdCtrls.pas',0,1,124,1,136,0,0
+File_1=SourceModule,'d:\program files\borland\delphi7\source\vcl\Forms.pas',0,1,3718,32,3730,0,0
+File_2=SourceModule,'C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\About.dfm',0,1,1,1,1,0,0
+File_3=SourceModule,'C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\EditorItem.dfm',0,1,1,1,1,0,0
+File_4=SourceModule,'C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\patrickw\changed\EditorItem.dfm',0,1,3643,4,3666,0,0
+File_5=SourceModule,'d:\program files\borland\delphi7\source\rtl\Sys\system.pas',0,1,1,1,18,0,0
+File_6=SourceModule,'C:\Documents and Settings\Jernej\Desktop\AppBuilder\Delfi\grand theft auto\gtavc\CityCraft\U_editor.pas',0,1,659,14,666,1,0
+File_7=SourceModule,'d:\program files\borland\delphi7\source\rtl\Win\OpenGL.pas',0,1,648,1,541,0,0
+
+[Modules]
+Module0=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\GTADff.pas
+Module1=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\ExtraView.pas
+Module2=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\GTAImg.pas
+Module3=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\GTATxd.pas
+Module4=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\Main.pas
+Module5=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\KEd.dpr
+Module6=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\GTACol.pas
+Module7=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\GLViewDetached.pas
+Module8=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\GLView.pas
+Module9=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\COLADDON\FastTextCRC.pas
+Module10=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\EditorItem.pas
+Module11=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\U_MooSettings.pas
+Module12=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\GTAZon.pas
+Module13=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\GTAText.pas
+Module14=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\COLADDON\U_records.pas
+Module15=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\EditorDAT.pas
+Module16=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\EditorArchive.pas
+Module17=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\DirDialog.pas
+Module18=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\DelfiParser.pas
+Module19=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\COLADDON\ColClass.pas
+Module20=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\BitUnit.pas
+Module21=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\AudioADF.pas
+Module22=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\About.pas
+Module23=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\EditorIPL.pas
+Module24=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\EditorIDE.pas
+Module25=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\Startup.pas
+Count=26
+EditWindowCount=1
+
+[C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\GTADff.pas]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\ExtraView.pas]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\GTAImg.pas]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\GTATxd.pas]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\Main.pas]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=0
+
+[C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\KEd.dpr]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+SymbolFile=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\KEd.dsm
+ModSinceCompile=0
+
+[C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\GTACol.pas]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\GLViewDetached.pas]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\GLView.pas]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\COLADDON\FastTextCRC.pas]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\EditorItem.pas]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\U_MooSettings.pas]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\GTAZon.pas]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\GTAText.pas]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\COLADDON\U_records.pas]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\EditorDAT.pas]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\EditorArchive.pas]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\DirDialog.pas]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\DelfiParser.pas]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\COLADDON\ColClass.pas]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\BitUnit.pas]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\AudioADF.pas]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\About.pas]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\EditorIPL.pas]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\EditorIDE.pas]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\Startup.pas]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[D:\Program Files\Borland\Delphi7\Projects\ProjectGroup1.bpg]
+FormState=0
+FormOnTop=0
+
+[EditWindow0]
+ViewCount=26
+CurrentView=23
+View0=0
+View1=1
+View2=2
+View3=3
+View4=4
+View5=5
+View6=6
+View7=7
+View8=8
+View9=9
+View10=10
+View11=11
+View12=12
+View13=13
+View14=14
+View15=15
+View16=16
+View17=17
+View18=18
+View19=19
+View20=20
+View21=21
+View22=22
+View23=23
+View24=24
+View25=25
+CodeExplorer=CodeExplorer@EditWindow0
+MessageView=MessageView@EditWindow0
+Create=1
+Visible=1
+State=0
+Left=200
+Top=122
+Width=760
+Height=511
+MaxLeft=-4
+MaxTop=97
+ClientWidth=752
+ClientHeight=484
+LeftPanelSize=0
+LeftPanelClients=CodeExplorer@EditWindow0
+LeftPanelData=00000400010000000C000000436F64654578706C6F7265720000000000000000000000000000000000FFFFFFFF
+RightPanelSize=0
+BottomPanelSize=85
+BottomPanelClients=MessageView@EditWindow0
+BottomPanelData=000004000000000000000000000000000000000000000000000100000000000000000B0000004D65737361676556696577FFFFFFFF
+
+[View0]
+Module=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\Startup.pas
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+
+[View1]
+Module=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\Main.pas
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+
+[View2]
+Module=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\EditorIDE.pas
+CursorX=1
+CursorY=448
+TopLine=439
+LeftCol=1
+
+[View3]
+Module=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\EditorIPL.pas
+CursorX=1
+CursorY=583
+TopLine=577
+LeftCol=1
+
+[View4]
+Module=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\About.pas
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+
+[View5]
+Module=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\AudioADF.pas
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+
+[View6]
+Module=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\BitUnit.pas
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+
+[View7]
+Module=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\COLADDON\ColClass.pas
+CursorX=23
+CursorY=114
+TopLine=97
+LeftCol=1
+
+[View8]
+Module=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\DelfiParser.pas
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+
+[View9]
+Module=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\DirDialog.pas
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+
+[View10]
+Module=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\EditorArchive.pas
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+
+[View11]
+Module=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\EditorDAT.pas
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+
+[View12]
+Module=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\COLADDON\U_records.pas
+CursorX=7
+CursorY=89
+TopLine=76
+LeftCol=1
+
+[View13]
+Module=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\GTAText.pas
+CursorX=15
+CursorY=3737
+TopLine=3721
+LeftCol=1
+
+[View14]
+Module=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\GTATxd.pas
+CursorX=19
+CursorY=58
+TopLine=40
+LeftCol=1
+
+[View15]
+Module=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\GTAZon.pas
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+
+[View16]
+Module=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\U_MooSettings.pas
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+
+[View17]
+Module=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\EditorItem.pas
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+
+[View18]
+Module=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\ExtraView.pas
+CursorX=19
+CursorY=469
+TopLine=456
+LeftCol=1
+
+[View19]
+Module=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\COLADDON\FastTextCRC.pas
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+
+[View20]
+Module=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\GLView.pas
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+
+[View21]
+Module=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\GLViewDetached.pas
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+
+[View22]
+Module=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\GTACol.pas
+CursorX=1
+CursorY=1
+TopLine=1
+LeftCol=1
+
+[View23]
+Module=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\GTADff.pas
+CursorX=46
+CursorY=300
+TopLine=290
+LeftCol=1
+
+[View24]
+Module=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\GTAImg.pas
+CursorX=27
+CursorY=80
+TopLine=67
+LeftCol=1
+
+[View25]
+Module=C:\Documents and Settings\Jernej\Desktop\AppBuilder\moomapper\KEd.dpr
+CursorX=1
+CursorY=35
+TopLine=28
+LeftCol=1
+
+[Watches]
+Count=0
+
+[Breakpoints]
+Count=0
+
+[AddressBreakpoints]
+Count=0
+
+[Main Window]
+Create=1
+Visible=1
+State=2
+Left=-4
+Top=-4
+Width=1003
+Height=105
+MaxLeft=-1
+MaxTop=-1
+MaxWidth=1003
+MaxHeight=105
+ClientWidth=995
+ClientHeight=78
+
+[ProjectManager]
+Create=1
+Visible=0
+State=0
+Left=369
+Top=372
+Width=438
+Height=303
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=430
+ClientHeight=279
+TBDockHeight=303
+LRDockWidth=438
+Dockable=1
+
+[AlignmentPalette]
+Create=1
+Visible=0
+State=0
+Left=230
+Top=107
+Width=156
+Height=82
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=150
+ClientHeight=60
+
+[PropertyInspector]
+Create=1
+Visible=1
+State=0
+Left=30
+Top=109
+Width=190
+Height=602
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=182
+ClientHeight=578
+TBDockHeight=602
+LRDockWidth=190
+Dockable=1
+SplitPos=85
+ArrangeBy=Name
+SelectedItem=Caption
+ExpandedItems=
+HiddenCategories=
+
+[ObjectTree]
+Create=1
+Visible=0
+State=0
+Left=30
+Top=105
+Width=190
+Height=242
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=182
+ClientHeight=218
+TBDockHeight=242
+LRDockWidth=190
+Dockable=1
+
+[CodeExplorer@EditWindow0]
+Create=1
+Visible=0
+State=0
+Left=-30
+Top=17
+Width=140
+Height=305
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=140
+ClientHeight=305
+TBDockHeight=305
+LRDockWidth=140
+Dockable=1
+
+[MessageView@EditWindow0]
+Create=1
+Visible=1
+State=0
+Left=12
+Top=0
+Width=740
+Height=85
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=740
+ClientHeight=85
+TBDockHeight=85
+LRDockWidth=443
+Dockable=1
+
+[DockHosts]
+DockHostCount=0
+
