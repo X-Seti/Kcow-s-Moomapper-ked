@@ -1,0 +1,9 @@
+"J:\Grand Theft Auto\Myriad islands\","MYRIAD ISLANDS"
+"J:\Grand Theft Auto\Vice City [OK]\","GTA Vice City"
+"J:\Grand Theft Auto\gta3\","GTA III"
+"J:\Grand Theft Auto\GTA LC\","GTA LC"
+"J:\Grand Theft Auto\Vice City mod\","gtavc modded"
+"J:\Grand Theft Auto\all myriad stuff is in here!!\Myriad islands (more complete but broken)\","myriad broken stuff"
+"J:\Grand Theft Auto\all myriad stuff is in here!!\Myriad islands\",MYRIADTEXTFIXING
+"J:\Grand Theft Auto\GTA-VC\","GTAVC CLEAN"
+"J:\Grand Theft Auto\MYRIAD ISLANDS\","MYRIAD NEW"
