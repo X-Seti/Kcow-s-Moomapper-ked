@@ -1,0 +1,243 @@
+[Main Window]
+Create=1
+Visible=1
+State=2
+Left=-4
+Top=-4
+Width=1032
+Height=105
+MaxLeft=-1
+MaxTop=-1
+MaxWidth=1032
+MaxHeight=105
+ClientWidth=1024
+ClientHeight=78
+
+[PropertyInspector]
+Create=1
+Visible=1
+State=0
+Left=0
+Top=102
+Width=190
+Height=620
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=180
+ClientHeight=594
+TBDockHeight=585
+LRDockWidth=182
+Dockable=1
+SplitPos=91
+
+[ThreadStatusWindow]
+Create=1
+Visible=1
+State=0
+Left=0
+Top=0
+Width=294
+Height=225
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=294
+ClientHeight=225
+TBDockHeight=152
+LRDockWidth=474
+Dockable=1
+Column0Width=95
+Column1Width=60
+Column2Width=75
+Column3Width=230
+
+[ModuleWindow]
+Create=1
+Visible=1
+State=0
+Left=0
+Top=0
+Width=294
+Height=225
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=294
+ClientHeight=225
+TBDockHeight=126
+LRDockWidth=596
+Dockable=1
+Column0Width=125
+Column1Width=100
+Column2Width=155
+EntryPointPane=200
+CompUnitPane=285
+
+[Closed Files]
+File_0=SourceModule,'C:\Documents and Settings\Jernej\Desktop\AppBuilder\Delfi\Top Down City\CODE\real time code\objs.pas',0,1,59,1,61,0,0
+File_1=SourceModule,'C:\Documents and Settings\Jernej\Desktop\AppBuilder\Delfi\Top Down City\CODE\real time code\CodeLog.txt',0,1,462,25,462,0,0
+File_2=SourceModule,'C:\Documents and Settings\Jernej\Desktop\AppBuilder\Delfi\Top Down City\CODE\real time code\GL_Ext.pas',0,1,629,155,667,0,0
+File_3=SourceModule,'C:\Documents and Settings\Jernej\Desktop\AppBuilder\Delfi\Top Down City\CODE\real time code\game_Gui.pas',0,1,1012,61,1021,0,0
+File_4=SourceModule,'C:\Documents and Settings\Jernej\Desktop\AppBuilder\Delfi\Top Down City\CODE\real time code\Newton_geo.pas',0,1,49,38,60,0,0
+File_5=SourceModule,'C:\Documents and Settings\Jernej\Desktop\AppBuilder\Delfi\Top Down City\CODE\real time code\game_Audio.pas',0,1,70,29,81,0,0
+File_6=SourceModule,'C:\Documents and Settings\Jernej\Desktop\AppBuilder\Delfi\Top Down City\CODE\real time code\GL_Tex.pas',0,1,165,2,172,0,0
+File_7=SourceModule,'C:\Documents and Settings\Jernej\Desktop\AppBuilder\Delfi\Top Down City\CODE\real time code\GL_Engine.pas',0,1,760,13,775,0,0
+File_8=SourceModule,'C:\Documents and Settings\Jernej\Desktop\AppBuilder\Delfi\Top Down City\CODE\real time code\sys_calc.pas',0,1,1016,18,1030,0,0
+File_9=SourceModule,'C:\Documents and Settings\Jernej\Desktop\AppBuilder\Delfi\Top Down City\CODE\real time code\Platform.pas',0,1,478,1,489,0,0
+
+[Modules]
+Module0=C:\Documents and Settings\Jernej\Desktop\AppBuilder\Delfi\grand theft auto\GTA_SA\gtainterface\test\Unit1.pas
+Module1=C:\Documents and Settings\Jernej\Desktop\AppBuilder\Delfi\grand theft auto\GTA_SA\gtainterface\test\Project1.dpr
+Module2=C:\Documents and Settings\Jernej\Desktop\AppBuilder\Delfi\grand theft auto\GTA_SA\gtainterface\GTADLL.PAS
+Count=3
+EditWindowCount=1
+
+[C:\Documents and Settings\Jernej\Desktop\AppBuilder\Delfi\grand theft auto\GTA_SA\gtainterface\test\Unit1.pas]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=0
+
+[C:\Documents and Settings\Jernej\Desktop\AppBuilder\Delfi\grand theft auto\GTA_SA\gtainterface\test\Project1.dpr]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Documents and Settings\Jernej\Desktop\AppBuilder\Delfi\grand theft auto\GTA_SA\gtainterface\GTADLL.PAS]
+ModuleType=SourceModule
+FormState=0
+FormOnTop=0
+
+[C:\Documents and Settings\Jernej\Desktop\AppBuilder\Delfi\grand theft auto\GTA_SA\gtainterface\ProjectGroup1.bpg]
+FormState=0
+FormOnTop=0
+
+[EditWindow0]
+CodeExplorer=CodeExplorer@EditWindow0
+MessageView=MessageView@EditWindow0
+Create=1
+Visible=1
+State=0
+Left=226
+Top=138
+Width=696
+Height=482
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=688
+ClientHeight=455
+LeftPanelSize=0
+LeftPanelClients=CodeExplorer@EditWindow0
+LeftPanelData=00000400010000000C000000436F64654578706C6F7265720000000000000000000000000000000000FFFFFFFF
+RightPanelSize=0
+BottomPanelSize=0
+BottomPanelClients=MessageView@EditWindow0
+BottomPanelData=00000400010000000B0000004D657373616765566965770000000000000000000000000000000000FFFFFFFF
+ViewCount=3
+CurrentView=0
+View0=0
+View1=1
+View2=2
+
+[CodeExplorer@EditWindow0]
+Create=1
+Visible=0
+State=0
+Left=0
+Top=11
+Width=140
+Height=426
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=140
+ClientHeight=426
+TBDockHeight=305
+LRDockWidth=140
+Dockable=1
+
+[MessageView@EditWindow0]
+Create=1
+Visible=0
+State=0
+Left=11
+Top=0
+Width=677
+Height=52
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=677
+ClientHeight=52
+TBDockHeight=52
+LRDockWidth=443
+Dockable=1
+
+[View0]
+Module=C:\Documents and Settings\Jernej\Desktop\AppBuilder\Delfi\grand theft auto\GTA_SA\gtainterface\test\Unit1.pas
+CursorX=19
+CursorY=37
+TopLine=26
+LeftCol=1
+
+[View1]
+Module=C:\Documents and Settings\Jernej\Desktop\AppBuilder\Delfi\grand theft auto\GTA_SA\gtainterface\test\Project1.dpr
+CursorX=1
+CursorY=10
+TopLine=1
+LeftCol=1
+
+[View2]
+Module=C:\Documents and Settings\Jernej\Desktop\AppBuilder\Delfi\grand theft auto\GTA_SA\gtainterface\GTADLL.PAS
+CursorX=24
+CursorY=34
+TopLine=22
+LeftCol=1
+
+[DockHosts]
+DockHostCount=1
+
+[DockSite0]
+DockSiteType=1
+Create=1
+Visible=1
+State=0
+Left=254
+Top=256
+Width=310
+Height=278
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=302
+ClientHeight=254
+TBDockHeight=94
+LRDockWidth=283
+Dockable=1
+TabPosition=0
+TabDockClients=ModuleWindow,ThreadStatusWindow
+
+[Watches]
+Count=1
+Watch0='lastspacew',256,0,18,1
+
+[Breakpoints]
+Count=0
+
+[AddressBreakpoints]
+Count=0
+
+[PVCS Browser]
+Left=387
+Top=172
+Width=625
+Height=393
+State=0
+Visible=0
+[PVCS VDiff]
+Left=421
+Top=107
+Width=591
+Height=608
+Layout=1
+Orientation=1
+State=0
+Visible=0
+File1Color=16711680
+File2Color=255
+SpaceColor=16776960
+TextColor=0
