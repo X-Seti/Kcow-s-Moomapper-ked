@@ -1,6 +1,20 @@
 #belongs in Kcow-s-Moomapper-ked/ChangeLog -Version:1.6
 # X-Seti-2026-08-01
 
+2026-08-01: Fixed gta_img.py - properly detects .dir companion file (case-insensitive).
+2026-08-01: Added _find_companion() function from IMG Factory 1.6.
+2026-08-01: Fixed _open_files() - reads from .dir file for GTA III/VC format.
+2026-08-01: Fixed _read_sa_directory() - reads VER2 header for San Andreas format.
+2026-08-01: Corrected entry parsing: 32-byte records from .dir file (offset, size, name).
+2026-08-01: Auto-detects dual-file (.dir+.img) vs single-file (SA VER2) formats.
+2026-08-01: Fixed extraction to use start_block * 2048 sector addressing.
+
+2026-08-01: Fixed gta_img.py - properly handles dual-file format (gta3.img + gta3.dir).
+2026-08-01: Added _read_sa_directory() for San Andreas single-file IMG format.
+2026-08-01: Auto-detects GTA III/VC format (.dir file) vs SA format (embedded directory).
+2026-08-01: Fixed entry parsing from .dir file with 32-byte records.
+2026-08-01: Improved error handling for missing .dir files.
+
 2026-08-01: Initialized v1.6 for Python 3 / Qt5 port.
 2026-08-01: Added core parsers (IMG, DFF, TXD, COL, IDE, IPL).
 2026-08-01: Added OpenGL 3D viewer with texture mapping.

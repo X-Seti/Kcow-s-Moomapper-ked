@@ -3,7 +3,24 @@
 
 import os
 import struct
-from typing import List, Dict, Any, Optional, BinaryIO
+from typing import List, Dict, Optional, BinaryIO
+
+# vers: 1.6
+def _find_companion(file_path: str, extension: str) -> Optional[str]:
+    """Find companion file with given extension (case-insensitive)"""
+    base_path = os.path.splitext(file_path)[0]
+    
+    # Try lowercase extension first
+    lower_path = base_path + extension
+    if os.path.exists(lower_path):
+        return lower_path
+    
+    # Try uppercase extension
+    upper_path = base_path + extension.upper()
+    if os.path.exists(upper_path):
+        return upper_path
+    
+    return None
 
 # vers: 1.6
 class DirEntry:
@@ -33,7 +50,7 @@ class DirEntry:
 
 # vers: 1.6
 class GTA3Archive:
-    def __init__(self, filename: str, create_new: bool = False, only_textures: bool = False):
+    def __init__(self, filename: str, create_new: bool = False):
         self.filename = filename
         self.entries: List[DirEntry] = []
         self.archive_list: Dict[str, int] = {}
@@ -41,37 +58,88 @@ class GTA3Archive:
         self.archive_opened = False
         self.f_dir: Optional[BinaryIO] = None
         self.f_img: Optional[BinaryIO] = None
-        self._open_files(filename, create_new, only_textures)
+        self._open_files(filename, create_new)
 
     # vers: 1.6
-    def _open_files(self, filename: str, create_new: bool, only_textures: bool):
-        mode = 'wb' if create_new else 'r+b'
+    def _open_files(self, filename: str, create_new: bool):
+        # Check if this is a dual-file format (GTA III/VC) or single-file (SA)
+        dir_filename = _find_companion(filename, '.dir')
+        has_dir_file = dir_filename is not None
+        
         try:
-            self.f_img = open(filename, mode)
-            self.f_dir = open(os.path.splitext(filename)[0] + '.dir', mode)
-        except IOError:
+            if create_new:
+                self.f_img = open(filename, 'wb')
+                if has_dir_file or True:  # Always create .dir for GTA III/VC format
+                    dir_path = os.path.splitext(filename)[0] + '.dir'
+                    self.f_dir = open(dir_path, 'wb')
+            else:
+                # Try to open IMG file
+                self.f_img = open(filename, 'r+b')
+                
+                # Try to open DIR file if it exists
+                if has_dir_file:
+                    self.f_dir = open(dir_filename, 'r+b')
+                else:
+                    # Single file format (San Andreas) - no .dir file
+                    self.f_dir = None
+                
+        except IOError as e:
+            print(f"Error opening files: {e}")
             self.read_only = True
             try:
                 self.f_img = open(filename, 'rb')
-                self.f_dir = open(os.path.splitext(filename)[0] + '.dir', 'rb')
+                if has_dir_file:
+                    self.f_dir = open(dir_filename, 'rb')
+                else:
+                    self.f_dir = None
             except IOError:
                 self.archive_opened = False
                 return
 
         self.archive_opened = True
+        
         if not create_new:
-            self.f_dir.seek(0, os.SEEK_END)
-            dir_size = self.f_dir.tell()
-            self.f_dir.seek(0)
-            for i in range(dir_size // 32):
-                data = self.f_dir.read(32)
-                if len(data) == 32:
-                    self.entries.append(DirEntry.from_bytes(data, i))
+            if self.f_dir:
+                # Read from .dir file (GTA III/VC format)
+                self.f_dir.seek(0, os.SEEK_END)
+                dir_size = self.f_dir.tell()
+                self.f_dir.seek(0)
+                
+                entry_count = dir_size // 32
+                for i in range(entry_count):
+                    data = self.f_dir.read(32)
+                    if len(data) == 32:
+                        self.entries.append(DirEntry.from_bytes(data, i))
+            else:
+                # Read from IMG file header (San Andreas format)
+                self._read_sa_directory()
+        
         self.create_list()
 
     # vers: 1.6
-    def add(self, filename: str, stream: BinaryIO):
-        pass  # Overridden in GTAImg
+    def _read_sa_directory(self):
+        """Read directory entries from San Andreas IMG format (VER2)"""
+        if not self.f_img:
+            return
+            
+        self.f_img.seek(0)
+        header = self.f_img.read(8)
+        if len(header) < 8:
+            return
+        
+        # Check for SA IMG header (VER2)
+        if header[:4] == b'VER2':
+            # Read entry count
+            entry_count = struct.unpack('<I', header[4:8])[0]
+            
+            # Read entries
+            for i in range(entry_count):
+                data = self.f_img.read(32)
+                if len(data) == 32:
+                    self.entries.append(DirEntry.from_bytes(data, i))
+        else:
+            # Not a valid SA IMG file
+            print(f"Error: Invalid IMG header in {self.filename}")
 
     # vers: 1.6
     def create_list(self):
@@ -84,11 +152,12 @@ class GTA3Archive:
     # vers: 1.6
     def do_remove(self):
         self.entries = [e for e in self.entries if not e.delete]
-        self.f_dir.seek(0)
-        self.f_dir.truncate()
-        for i, entry in enumerate(self.entries):
-            entry.index = i
-            self.f_dir.write(entry.to_bytes())
+        if self.f_dir:
+            self.f_dir.seek(0)
+            self.f_dir.truncate()
+            for i, entry in enumerate(self.entries):
+                entry.index = i
+                self.f_dir.write(entry.to_bytes())
         self.create_list()
 
     # vers: 1.6
@@ -97,10 +166,13 @@ class GTA3Archive:
 
     # vers: 1.6
     def extract(self, index: int, stream: BinaryIO):
+        if index < 0 or index >= len(self.entries):
+            return
         entry = self.entries[index]
-        self.f_img.seek(entry.start_block * 2048)
-        if entry.block_count > 0:
-            stream.write(self.f_img.read(entry.block_count * 2048))
+        if self.f_img:
+            self.f_img.seek(entry.start_block * 2048)
+            if entry.block_count > 0:
+                stream.write(self.f_img.read(entry.block_count * 2048))
 
     # vers: 1.6
     def get_entry(self, index: int) -> DirEntry:
@@ -113,45 +185,31 @@ class GTA3Archive:
     # vers: 1.6
     def rename(self, index: int, new_name: str):
         self.entries[index].name = new_name
-        self.f_dir.seek(index * 32)
-        self.f_dir.write(self.entries[index].to_bytes())
+        if self.f_dir:
+            self.f_dir.seek(index * 32)
+            self.f_dir.write(self.entries[index].to_bytes())
         self.create_list()
 
 # vers: 1.6
 class GTAImg(GTA3Archive):
     def __init__(self, filename: str = ""):
-        super().__init__(filename, False, False)
+        super().__init__(filename, False)
         self.txd_list: Dict[str, int] = {}
         self.dff_list: Dict[str, int] = {}
-        self.gtxd: List[Any] = []
-        self.gdff: List[Any] = []
-        self.kill_not_used = False
-
-    # vers: 1.6
-    def add(self, filename: str, stream: BinaryIO):
-        pass  # To be implemented with TXD/DFF tracking
 
     # vers: 1.6
     def create_dff_list(self):
-        self.dff_list = {obj.name.lower(): i for i, obj in enumerate(self.gdff)}
+        self.dff_list = {e.name.lower(): i for i, e in enumerate(self.entries) 
+                        if e.name.lower().endswith('.dff') and not e.delete}
 
     # vers: 1.6
     def create_txd_list(self):
-        self.txd_list = {obj.name.lower(): i for i, obj in enumerate(self.gtxd)}
+        self.txd_list = {e.name.lower(): i for i, e in enumerate(self.entries) 
+                        if e.name.lower().endswith('.txd') and not e.delete}
 
     # vers: 1.6
     def destroy_dff_list(self):
         self.dff_list.clear()
-
-    # vers: 1.6
-    def destroy_not_used(self):
-        for obj in self.gdff:
-            if not getattr(obj, 'in_use', False):
-                obj.unload()
-        for i in range(1, len(self.gtxd)):
-            if not getattr(self.gtxd[i], 'in_use', False):
-                if not (len(self.gtxd[i].name) == 7 and self.gtxd[i].name.lower() == 'radar.txd'):
-                    self.gtxd[i].unload()
 
     # vers: 1.6
     def destroy_txd_list(self):
@@ -160,17 +218,16 @@ class GTAImg(GTA3Archive):
     # vers: 1.6
     def dff_exists(self, in_name: str) -> bool:
         in_name = in_name.lower()
-        return in_name in self.archive_list or f"{in_name}.dff" in self.archive_list
+        if in_name.endswith('.dff'):
+            in_name = in_name[:-4]
+        return f"{in_name}.dff".lower() in self.archive_list
 
     # vers: 1.6
     def get_dff_num(self, in_name: str) -> int:
         in_name = in_name.lower()
-        if in_name in self.dff_list:
-            return self.dff_list[in_name]
-        for i, obj in enumerate(self.gdff):
-            if obj.name.lower() == in_name:
-                return i
-        return -1
+        if in_name.endswith('.dff'):
+            in_name = in_name[:-4]
+        return self.archive_list.get(f"{in_name}.dff", -1)
 
     # vers: 1.6
     def get_entry_num(self, in_name: str) -> int:
@@ -179,31 +236,11 @@ class GTAImg(GTA3Archive):
     # vers: 1.6
     def get_txd_num(self, in_name: str) -> int:
         in_name = in_name.lower()
-        if in_name == 'generic' and len(self.gtxd) > 0:
+        if in_name == 'generic':
             return 0
-        if in_name in self.txd_list:
-            return self.txd_list[in_name]
-        for i, obj in enumerate(self.gtxd):
-            if obj.name.lower() == in_name:
-                return i
-        return -1
-
-    # vers: 1.6
-    def gl_draw(self, in_name: str, in_txd: int):
-        index = self.get_dff_num(in_name)
-        if index != -1:
-            if not getattr(self.gdff[index], 'loaded', False):
-                self.gdff[index].load_from_stream()
-            self.gdff[index].gl_draw(in_txd)
-            self.gdff[index].in_use = True
-
-    # vers: 1.6
-    def set_not_used(self):
-        self.kill_not_used = True
-        for obj in self.gdff:
-            obj.in_use = False
-        for obj in self.gtxd:
-            obj.in_use = False
+        if in_name.endswith('.txd'):
+            in_name = in_name[:-4]
+        return self.archive_list.get(f"{in_name}.txd", -1)
 
     # vers: 1.6
     def txd_exists(self, in_name: str) -> bool:
@@ -212,4 +249,4 @@ class GTAImg(GTA3Archive):
             return True
         if in_name.endswith('.txd'):
             in_name = in_name[:-4]
-        return in_name in self.archive_list or f"{in_name}.txd" in self.archive_list
+        return f"{in_name}.txd" in self.archive_list
